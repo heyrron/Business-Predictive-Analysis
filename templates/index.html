@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Financial Prediction Model</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="datafile">Upload CSV File:</label>
+            <input type="file" name="datafile" id="datafile" required>
+            <label for="years">Number of years to predict:</label>
+            <input type="number" name="years" id="years" min="1" max="10" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if plot_div %}
+        <h2>Revenue Prediction for Next {{ years }} Years:</h2>
+        <div>{{ plot_div|safe }}</div>
+
+        <div class="shap-plot">
+            <h3>Residual Plot (SHAP Approximation)</h3>
+            <img src="data:image/png;base64,{{ shap_plot_url }}" alt="SHAP Plot">
+        </div>
+
+        <div class="explanation">
+            <h3>Prediction Explanation</h3>
+            <p>{{ explanation }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

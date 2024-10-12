@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+label {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+input[type="file"], input[type="number"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+h2 {
+    color: #333333;
+    text-align: center;
+}
+
+.shap-plot {
+    text-align: center;
+}
+
+.explanation {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 5px solid #5cb85c;
+}
+
+.explanation h3 {
+    margin: 0;
+    color: #5cb85c;
+}
+
+.explanation p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.5;
+}
