@@ -1,4 +1,3 @@
-Sure! Here’s a detailed README description for your Business Predictive Analysis web app:
 
 **Business Predictive Analysis Web App**
 
